@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<img src="Logo11.png"width="250" 
+height="250" align="middle" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Sweets and Chips Shop</title>
+	 <script>
+        // قائمة المنتجات
+        var products = [
+            { name: "منتج 1", price: 19 },
+            { name: "منتج 2", price: 19 },
+            { name: "منتج 3", price: 19 },
+			{ name: "منتج 4", price: 19 },
+        ];
+
+        var cart = [];
+
+        // أضف المنتج إلى سلة التسوق
+        function addToCart(productIndex) {
+            var product = products[productIndex];
+            cart.push(product);
+            updateCart();
+        }
+
+        // عرض سلة التسوق
+        function updateCart() {
+            var cartList = document.getElementById("cart-list");
+            var total = 0;
+
+            // قم بمسح سلة التسوق الحالية
+            while (cartList.firstChild) {
+                cartList.removeChild(cartList.firstChild);
+            }
+
+            // قم بإضافة المنتجات إلى سلة التسوق وحساب الإجمالي
+            cart.forEach(function(product, index) {
+                var li = document.createElement("li");
+                li.textContent = product.name + " - SAR " + product.price.toFixed(2);
+                cartList.appendChild(li);
+                total += product.price;
+            });
+
+            // عرض الإجمالي بالريال السعودي
+            var totalElement = document.getElementById("cart-total");
+            totalElement.textContent = "الإجمالي: SAR " + total.toFixed(2);
+        }
+
+        // زر الشراء
+        function purchase() {
+            if (cart.length > 0) {
+                // يمكنك هنا إجراء عملية الشراء كما تحتاج
+                alert("يرجى التواصل على حساباتنا لتأكيد الطلب والدفع");
+                cart = []; // قم بمسح سلة التسوق بعد الشراء
+                updateCart();
+            } else {
+                alert("سلة التسوق فارغة. الرجاء إضافة منتجات قبل الشراء.");
+            }
+        }
+    </script>
+</head>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe5e5;
+    text-align: center;
+}
+
+header {
+    background-color:#FDCFE5;
+    padding: 20px;
+}
+
+h1 {
+    color: #572410;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.product {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 20px;
+}
+
+.buy-button {
+    background-color:#E1A2C0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    background-color: #FDCFE5;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+form {
+    text-align:center;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #E1A2C0;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #E1A2C0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #E1A2C0;
+}
+</style>
+ <header>
+        <h1>Imported Candy</h1>
+    </header>
+<body>
+<div class="container">
+<section class="product"> 
+<img src="hr.jpg" width="190"
+height="160" align="left">
+
+<br>
+<h3>حلاوة وارهيدز </h3>
+<br>
+<li><button onclick="addToCart(0)"class="buy-button">14SAR
+<br>
+شراء</button></li>
+<br>
+
+<img src="co.jpg" width="190"
+height="160" align="left">
+<br>
+<h3>جيلي فيدال كولا </h3>
+<br>
+<li><button onclick="addToCart(0)"class="buy-button"> 14SAR
+<br>
+شراء</button></li>
+<br>
+
+<img src="Ssa.jpg" width="190"
+height="160" align="left">
+<br>
+<h3>حلاوة ساور بانش بالفواكة </h3>
+<br>
+<li><button onclick="addToCart(0)"class="buy-button">14SAR
+<br>
+شراء</button></li>
+<br>
+
+<img src="Kkh.jpg" width="190"
+height="160" align="left">
+<br>
+<h3>*حلاوة قمي هيلو كاتي الكبيرة *حبة </h3>
+<br>
+<li><button onclick="addToCart(0)"class="buy-button">3SAR
+<br>
+شراء</button></li>
+<br>
+
+</section>
+</div>
+
+<h1>ســلة الـــتـســـوق</h1>
+<ul id="cart-list"></ul>
+<p id="cart-total">الإجمالي: SAR 0.00</p>
+<button onclick="purchase()"class="buy-button">اشتر الآن</button>
+<br>
+<br>
+<br>
+<br>
+    <div class="contact-form">
+        <h2>للإستفسارات والشكاوي</h2>
+        <form>
+            
+            <input type="email" id="email" name="email" required>
+            <input type="submit" value="إرسال">
+        </form>
+		<br>
+		</style>
+<body>
+      <h2>:مــن نـحـن</h2>
+	 متجر متخصص في بيع المنتجات المستوردة والحصريه
+	 <br>
+	 <br>
+	    <h3>:طــرق الدفع المتاحة حالياً</h3>
+	 يرجى التواصل معنا على حساباتنا لدفع بتحويل البنكي
+	</body>
+	<br>
+<a href="https://www.tiktok.com/@sweet_shop74?_t=8h3qk733HP8&_r=1" target="_blank"><img src="tik.png"width="30" 
+height="30" align="left" ></a><a href="https://t.snapchat.com/z1VE5oZb" target="_blank"><img src="Sn.png"width="30" 
+height="30" align="left" ></a><a href="https://t.snapchat.com/z1VE5oZb" target="_blank"><img src="n2.png"width="30" 
+height="30" align="left" ></a><a href="https://web.whatsapp.com/" target="_blank"><img src="wt.png"width="30" 
+height="30" align="left" ></a>
+<br>
+</ul>
+    </div>
+</body>
+</html>

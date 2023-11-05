@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<img src="Logo11.png"width="250" 
+height="250" align="middle" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Sweets and Chips Shop</title>
+</head>
+
+    <title>إنشاء حساب جديد</title>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe5e5;
+    text-align: center;
+}
+        .buy-button {
+            background-color: #E1A2C0;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-align: center; 
+            margin: 0 auto;
+            display: block; 
+        }
+		
+		.buy-button:hover {
+    background-color: #FDCFE5;
+}
+		 input[type=text],
+   input[type=password] {
+       width: 100%;
+       padding: 12px 20px;
+       margin: 8px 0;
+       display: inline-block;
+       border: 2px solid #ccc;
+       box-sizing: border-box;
+   }
+   .main-container {
+       direction: rtl;
+       padding-right: 15px;
+       padding-left: 15px;
+       margin-right: auto;
+       margin-left: auto;
+       max-width: 700px;
+   }
+.cancelbtn {
+       padding: 15px 20px;
+       background-color: #FDCFE5;
+   }
+  
+  
+   .cancelbtn,
+   .signupbtn {
+       float: left;
+       width: 50%;
+   }
+  
+   .container {
+       padding: 16px;
+   }
+  
+   .clearfix::after {
+       content: "";
+       clear: both;
+       display: table;
+   }
+    @media screen and (max-width: 300px) {
+       .cancelbtn,
+       .signupbtn {
+           width: 100%;
+       }
+   }
+   
+    </style>
+<body>
+<div class="main-container">
+    <h1>إنشاء حساب جديد</h1>
+
+    <form action="/process-registration" method="post"style="border:1px solid #ccc">
+           <div class="container">
+               <label><b>البريد الالكتروني</b></label>
+               <input type="text" placeholder="أدخل بريدك الالكتروني هنا" name="email" required>
+                <label><b>رقم الجوال</b></label>
+               <input type="text" placeholder="أدخل رقم الجوال هنا" name="email" required>
+               <label><b>كلمة السر</b></label>
+               <input type="password" placeholder="كلمة السر" name="psw" required>
+               <label><b>تأكيد كلمة السر </b></label>
+               <input type="password" placeholder="تأكيد كلمة السر" name="psw-repeat" required>
+<br>
+               <input type="checkbox" checked="checked"> تذكرني
+               <p>لإنشاء الحساب، يجب الموافقة على <a href="#"> شروط الاستخدام & الخصوصية </a>.</p>
+ 
+               <div class="clearfix">
+        <a href="file:///C:/Users/96654/Desktop/shop.html"> <button class="buy-button" type="submit">إنشاء الحساب</button></a>
+		
+		</div>
+    </form>
+	</div>
+	 
+	       <br>
+		   <br>
+		   <br>
+		   <br>
+		   <br>
+		   <br>
+		   <br>
+
+<body>
+      <h2>:مــن نـحـن</h2>
+	 متجر متخصص في بيع المنتجات المستوردة والحصريه
+	 <br>
+	 <br>
+	    <h3>:طــرق الدفع المتاحة حالياً</h3>
+	 يرجى التواصل معنا على حساباتنا لدفع بتحويل البنكي
+	</body>
+		   <br>
+		   <br>
+<a href="https://www.tiktok.com/@sweet_shop74?_t=8h3qk733HP8&_r=1" target="_blank"><img src="tik.png"width="30" 
+height="30" align="middle" ></a><a href="https://t.snapchat.com/z1VE5oZb" target="_blank"><img src="Sn.png"width="30" 
+height="30" align="middle" ></a><a href="https://www.instagram.com/sweet.shop1i/?igshid=NzZlODBkYWE4Ng%3D%3D&utm_source=qr" target="_blank"><img src="n2.png"width="30" 
+height="30" align="middle" ></a><a href="https://web.whatsapp.com/" target="_blank"><img src="wt.png"width="30" 
+height="30" align="middle" ></a>
+<br>
+    </div>
+</body>
+</html>
